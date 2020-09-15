@@ -1,0 +1,241 @@
+\documentclass[11pt]{beamer}
+\usepackage{listings} % Include the listings-package
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb, amsfonts, latexsym, cancel}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{subfigure}
+\usepackage{hyperref}
+%\usepackage{authblk}
+\usepackage{blindtext}
+\usepackage{booktabs} % Allows the use of \toprule, 
+\usepackage{filecontents}
+\usepackage{courier} %% Sets font for listing as Courier.
+\usepackage{listings}
+%\usepackage{listings, xcolor}
+\lstset{
+tabsize = 2, %% set tab space width
+showstringspaces = false, %% prevent space marking in strings, string is defined as the text that is generally printed directly to the console
+numbers = left, %% display line numbers on the left
+commentstyle = \color{green}, %% set comment color
+keywordstyle = \color{blue}, %% set keyword color
+stringstyle = \color{red}, %% set string color
+rulecolor = \color{black}, %% set frame color to avoid being affected by text color
+basicstyle = \small \ttfamily , %% set listing font and size
+breaklines = true, %% enable line breaking
+numberstyle = \tiny,
+}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\definecolor{urlColor}{rgb}{0.06, 0.3, 0.57}
+\definecolor{linkColor}{rgb}{0.57, 0.0, 0.04}
+\definecolor{fileColor}{rgb}{0.0, 0.26, 0.26}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkColor,
+    filecolor=fileColor,      
+    urlcolor=urlColor,
+}
+\urlstyle{same}
+\setbeamercovered{transparent}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}
+%\usetheme{Berkeley}
+%\usetheme{Warsaw}
+%\usetheme{Madrid}
+
+\title[Presentación]{\bf\Huge Sidney L. Smith y Jane N. Mosier}
+\subtitle{Presentación}
+
+\author[grupo 12]
+{
+	Sneyder Montoya Pinto \inst{1}
+	Jeremy Jeison Cruz Gallegos \inst{2}
+	Alexandra Rosario Paricela Canazas \inst{3}
+	Melody Marisol Ramos Challa \inst{4}
+}
+\institute[UNSA]
+{
+\inst{1}% 
+System Engineering School\\
+System Engineering and Informatic Department\\
+Production and Services Faculty\\
+San Agustin National University of Arequipa
+}
+
+\date[2020-09-08]{\scriptsize{2020-09-08}}
+
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Content}
+\tableofcontents
+\end{frame}
+
+\section{Objetivo}
+\begin{frame}
+\frametitle{Objetivo}
+\begin{itemize}
+\item Consistencia entre distintos puntos de entradas de datos
+\item Minimizar las acciones de entrada por parte del usuario
+\item Minimizar la carga de memoria del usuario
+\item Compatibilidad entre el despliegue y la entrada
+\item flexibilidad para el usuario, en las formas de entrada
+\end{itemize}
+\end{frame}
+
+\section{Introduccion}
+\begin{frame}
+\frametitle{Introduccion}
+\begin{itemize}
+\item Al diseñar sistemas de informacion, se debe prestar atencion al software que soporta la interfaz de usuario. Durante los años las pautas para el diseño de interfaces de software han ido mejorando.
+En este caso se va a revisar el material publicado por Smith y Mosier en su publicacion de "guidelines for designing user interface software.(1984)".
+La publicacion nos habla principalmente de pautas para el diseño de interfaces de usuario, las limitacion que pueden surguir durante el desarrollo como son la presentacion, anotacion e informe de la interfas con el usuario y recomendaciones de como usar las directrices
+\end{itemize}
+\end{frame}
+
+
+\section{Secciones}
+\begin{frame}
+\frametitle{Secciones}
+\begin{itemize}
+\item Seccion 1: Entrada de datos
+\item Seccion 2: Pantalla de datos
+\item Seccion 3: Control de secuencia
+\item Seccion 4: Orientacion para el usuario
+\item Seccion 5: Transmicion de datos
+\item Seccion 6: Proteccion de datos
+\end{itemize}
+\end{frame}
+
+\section{Seccion 1}
+\begin{frame}
+\frametitle{Entrada de Datos}
+\begin{itemize}
+\item Esta sección contenía pautas para la entrada de texto, formularios en línea, validación de datos y otros temas relacionados con la obtención de información en la computadora.
+\item Marcado de campos de datos obligatorios y opcionales
+\item Marcadores de campo no ingresados con datos
+\item Justificación automática de entradas de longitud variable
+\item Tabulación explícita a campos de datos
+\item Formato de etiqueta distintivo
+\item Formato de etiqueta coherente
+\item Etiquetar la puntuación como señal de entrada
+\item Etiquetas informativas
+\item Indicación de formato de datos en etiquetas
+\item Etiquetado de unidades de medida
+\end{itemize}
+\end{frame}
+
+\section{Seccion 2}
+\begin{frame}
+\frametitle{Pantalla de Datos}
+\begin{itemize}
+\item La mayor parte de esta sección se ocupó de la salida de texto, formularios de datos y tablas, pero la mitad de la sección se centró en la visualización gráfica de datos.
+\item Visualización repetida de datos cíclicos
+\item Visualización directa de diferencias
+\item Gráficos de superficie
+\item Ordenar datos en gráficos de superficie
+\item Etiquetado de gráficos de superficie
+\item Curvas acumulativas
+\item Gráficos de barras
+\item Histogramas (gráficos de pasos)
+\item Orientación consistente de barras
+\item Espaciado de barras
+\end{itemize}
+\end{frame}
+
+\section{Seccion 3}
+\begin{frame}
+\frametitle{Control de Secuencia}
+\begin{itemize}
+\item Este título algo pintoresco se refería al control del usuario del flujo de trabajo, es decir, cómo los usuarios realizaban acciones en el sistema, en lugar de simplemente ingresar o ver datos.
+\item Lógica consistente para doble codificación
+\item Activación única de teclas de función
+\item Comentarios para la activación de la tecla de función
+\item Indicación de teclas de función activas
+\item Desactivación de teclas de función innecesarias
+\item Tecla única para funciones continuas
+\item Asignación consistente de teclas de función   
+\item Funciones consistentes en diferentes modos operativos
+\item Funciones de retorno fácil a nivel base
+\item Ubicación distintiva
+\end{itemize}
+\end{frame}
+
+\section{Seccion 4}
+\begin{frame}
+\frametitle{Orientacion para el Usuario}
+\begin{itemize}
+\item Esta sección fue mucho más allá de los sistemas de ayuda, discutiendo temas tales como retroalimentación del sistema e información de estado.
+\item Retroalimentación para entradas de control
+\item Indicación de la finalización del procesamiento
+\item Comentarios sobre solicitudes de impresión
+\item Identificación de pantalla
+\item Identificación de pantallas de varias páginas
+\item Indicación del modo operativo
+\item Indicación de la selección de opciones
+\item Indicación de la selección de artículos
+\item Comentarios para la interrupción del usuario
+\item Mensajes de error informativos
+\end{itemize}
+\end{frame}
+
+\section{Seccion 5}
+\begin{frame}
+\frametitle{Transmicion de Datos}
+\begin{itemize}
+\item Desde el punto de vista de hoy, esta sección se lee como una discusión sobre las interfaces de usuario de correo electrónico, pero muchas de las pautas también son relevantes para otros sistemas que permiten a los usuarios notificarse entre sí, como listas de deseos, aplicaciones para compartir fotos, etc.
+\item Listas de distribución informal
+\item Listas dentro de listas
+\item Modificación de listas de distribución
+\item Expansión automática de direcciones parciales
+\item Verificación automática de direcciones
+\item Direccionamiento de respuestas a mensajes recibidos
+\item Edición de encabezados de direcciones
+\item Ocurrencia única de dirección
+\item Distribución en serie
+\item Redistribución de mensajes recibidos
+\end{itemize}
+\end{frame}
+
+\section{Seccion 6}
+\begin{frame}
+\frametitle{Proteccion de Datos}
+\begin{itemize}
+\item Esta sección muestra la procedencia militar de las pautas, estando muy preocupada por guardar secretos. Pero incluso los sistemas civiles necesitan proteger los datos de sus usuarios, por lo que estas pautas siguen siendo muy relevantes.
+\item Inicio de sesión sencillo
+\item Indicación de inicio de sesión
+\item Elección de contraseñas por parte del usuario
+\item Cambio de contraseñas
+\item Entrada privada de contraseñas
+\item Limitación de los intentos de inicio de sesión fallidos
+\item Pruebas auxiliares para autenticar la identidad del usuario
+\item Reconocimiento continuo de la identidad del usuario
+\item Autorización única para el acceso a datos
+\item Clasificación de seguridad mostrada
+\end{itemize}
+\end{frame}
+
+\section{References}
+%References frame
+\begin{frame}
+\frametitle{References}
+\begin{itemize}
+\item \href{https://www.nngroup.com/articles/sixty-guidelines-from-1986-revisited/}{Sixty Guidelines From 1986 Revisited}
+\item \href{http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=690E3E1534AA8EBEF28FDE48927C4181?doi=10.1.1.84.8930&rep=rep1&type=pdf}{GUIDELINES FOR DESIGNING
+USER INTERFACE SOFTWARE-Sidney L. Smith and Jane N. Mosier}
+\end{itemize}
+\end{frame}
+
+\end{document}
